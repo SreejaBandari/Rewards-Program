@@ -103,14 +103,14 @@ const App = () => {
     }
   ]
 
-  function getIndividualTransactions(row) {
+  const getIndividualTransactions =(row) => {
     let byCustMonth = _.filter(transactionData.pointsPerTransaction, (tRow) => {
       return row.original.custid === tRow.custid && row.original.monthNumber === tRow.month;
     });
     return byCustMonth;
   }
   // const getIndividualTransactions = (row) => {
-  //   transactionData.pointsPerTransaction.filter((tRow) => {
+  //   return transactionData.pointsPerTransaction.filter((tRow) => {
   //     return row.original.custid === tRow.custid && row.original.monthNumber === tRow.month;
   //   });
   // }
